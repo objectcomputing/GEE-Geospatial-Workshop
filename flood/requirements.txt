@@ -1,0 +1,14 @@
+earthengine-api
+folium
+tqdm
+pandas
+numpy
+shapely
+rasterio
+branca
+geopandas
+pygeos
+rtree
+osmnx
+seaborn
+pandas_gbq
