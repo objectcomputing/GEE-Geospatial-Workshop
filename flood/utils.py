@@ -69,6 +69,7 @@ def raster_to_tabular(bucket_name, file_name, band_names):
     logging.info("Converting to DataFrame...")
     df = pd.DataFrame(transposed_arrays, columns=band_names)
     df['x'], df['y'], df['geometry'] = centroid_x.flatten(), centroid_y.flatten(), polygons
-
+    df['geometry'] = df['geometry'].astype(str)
+    
     logging.info("Completed raster to tabular conversion.")
     return df
